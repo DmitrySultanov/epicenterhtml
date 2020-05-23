@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+$dark: #333333;
+$fiolet: #8B33E8;
+$blue: #0B98FA;
+$gold: #F7D154;
+$red: #F96708;
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	background: #EFF3FE;
+}
+
+@media only screen and (min-width: 601px) {
+	.container {
+    	width: 100%;
+	}
+}
+
+@media only screen and (min-width: 993px) {
+	.container {
+    	width: 100%;
+	}
+}
+.container {
+	max-width: 100%;
+}
+
+
+.card {
+	color: $dark;
+	border-radius: 3px;
+	box-shadow: none;
+	box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15);
+    margin: 1rem 0;
+    padding: 15px;
+
+    .card-title {
+    	font-size: 16px;
+    	padding: 0;
+    }
+
+	.card-content {
+		border-radius: 3px;
+		padding: 0;
+		position: relative;
+
+		&.card-flex-column {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+
+	p {
+		margin: 0;
+	}
+
+	&.metrics {
+		letter-spacing: 0.15px;
+
+		.card-title {
+			font-size: 16px;
+			line-height: 1.3;
+			word-break: break-word;
+
+			strong {
+				font-weight: 700;
+			}
+
+			.date {
+				font-size: 12px;
+				line-height: 1.4;
+			}
+		}
+
+		.card-info {
+			margin: 10px 0;
+			position: static;
+
+			&__txt {
+				font-size: 24px;
+				line-height: 1;
+				margin-bottom: 15px;
+
+				strong {
+					font-size: 32px;
+					font-weight: 700;
+					margin-right: 10px;
+				}
+			}
+		}
+
+		.btn-floating {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			box-shadow: none;
+
+			& + .card-title {
+				padding-right: 70px;
+			}
+		}
+	}
+
+	&._fiolet {
+
+		.card-info__txt {
+			color: $fiolet;
+		}
+
+		.progress .progress-bar:after, .btn-floating {
+			background-color: $fiolet;
+		}
+	}
+
+	&._blue {
+		.card-info__txt {
+			color: $blue;
+		}
+
+		.progress .progress-bar:after, .btn-floating {
+			background-color: $blue;
+		}
+	}
+
+	&._gold {
+		.card-info__txt {
+			color: $gold;
+		}
+
+		.progress .progress-bar:after, .btn-floating {
+			background-color: $gold;
+		}
+	}
+
+	&._red {
+		.card-info__txt {
+			color: $red;
+		}
+
+		.progress .progress-bar:after, .btn-floating {
+			background-color: $red;
+		}
+	}
+
+	&.card-white {
+		.card-title {
+			border-bottom: 1px solid #E4E7EB;
+			padding-bottom: 10px;
+
+			&.has-btn {
+				position: relative;
+				padding-right: 40px;
+
+				.btn-sync {
+					position: absolute;
+					top: -4px;
+					right: 0;
+				}
+			}
+
+			.btn-sync {
+				background-color: transparent;
+				box-shadow: none;
+
+				i {
+					color: #999999;
+				}
+			}
+		}
+	}
+}
+
+.row.flex {
+	display: flex;
+	flex-wrap: wrap;
+
+	>.col {
+		>.card {
+			height: 100%;
+			margin: 0;
+
+			.card-content {
+				height: 100%;
+			}
+		}
+	}
+}
+
+
+@for $i from 0 through 100 {
+  .progress progress[value="#{$i}"]
+  {
+    & + .progress-value { left : $i * 1% }
+    & + .progress-value:before { content : '#{$i}%' }
+    & ~ .progress-vote-count { left : $i * 1% }
+    & ~ .progress-bg .progress-bar { width: $i * 1% }
+  }
+}
+
+.progress {
+  	position: relative;
+  	margin: 0;
+  	background-color: transparent;
+  	border-radius: 3px;
+
+	progress {
+	  	position: absolute;
+	  	width: 0;
+	  	height: 0;
+	  	overflow: hidden;
+	  	visibility: hidden;
+	}
+	.progress-vote-count {
+		position: absolute;
+		line-height: 20px;
+		margin-left: 54px;
+		white-space: nowrap;
+	}
+	.progress-bar {
+	  	overflow: hidden;
+	  	background: transparent;
+	  	width: 0;
+	  	height: 100%;
+	  	position: absolute;
+	  	top: 0;
+	  	left: 0;
+	  	border-radius: 3px;
+
+	  	&:after {
+		  background-color: $dark;
+		  position: absolute;
+		  content: '';
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  border-radius: 3px;
+		}
+	}
+	.progress-value {
+	  	font-size: 1rem;
+	  	line-height: 20px;
+	  	font-weight: bold;
+	  	color: $dark;
+	  	position: absolute;
+	    top: 0;
+	    margin-left: 12px;
+	}
+	.progress-bg {
+	  	background: #fff;
+	  	position: relative;
+	  	height: 4px;
+	  	overflow: hidden;
+	  	border-radius: 3px;
+	}
+	.progress progress[value="1"] + .progress-value:before {
+	  content: "1%"; 
+	}
+	.progress progress[value="1"] ~ .progress-bg .progress-bar {
+	  width: 1%; 
+	}
+
+	@media (max-width: 767px) {
+		.progress-vote-count {
+			font-size: 14px;
+		}
+	}
+}
