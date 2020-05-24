@@ -110,7 +110,25 @@
 							<a class="btn-floating btn-small waves-effect waves-light btn-sync"><i class="material-icons">sync</i></a>
 						</div>
 						<div class="card-content">
-							<div id="pie-chart"></div>
+							<div class="chart">
+								<div id="pie-chart"></div>
+								<div class="chart__info">
+									<div class="row">
+										<div class="col l4">
+											<p class="value">33%</p>
+											<p class="legend"><span class="bullet _blue"></span><span>Рисков нет</span></p>
+										</div>
+										<div class="col l4">
+											<p class="value">55%</p>
+											<p class="legend"><span class="bullet _red"></span><span>Репутационные риски</span></p>
+										</div>
+										<div class="col l4">
+											<p class="value">11%</p>
+											<p class="legend"><span class="bullet _gold"></span><span>Потенциальные риски</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -122,7 +140,215 @@
 							<a class="btn-floating btn-small waves-effect waves-light btn-sync"><i class="material-icons">sync</i></a>
 						</div>
 						<div class="card-content">
-							<div id="area-chart"></div>
+							<div class="chart">
+								<div id="area-chart"></div>
+								<div class="chart__info">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section id="es_query_container">
+			<div class="row flex">
+
+				<div class="col s12 m6 l4 xl4">
+					<div class="card card-white">
+						<div class="card-title has-btn">
+							<p>Подписи от двери до двери</p>
+							<a class="btn-floating btn-small waves-effect waves-light btn-sync"><i class="material-icons">sync</i></a>
+						</div>
+						<div class="card-content">
+							<div class="row">
+								<div class="col m12 l8 xl8">
+									<div class="chart">
+										<div id="chart_door_signatures"></div>
+										<div class="chart__info">
+											<div class="row">
+												<div class="col l4">
+													<p class="value">23%</p>
+													<p class="legend"><span class="bullet _blue"></span><span>До целевого показателя</span></p>
+												</div>
+												<div class="col l4">
+													<p class="value">72%</p>
+													<p class="legend"><span class="bullet _gold"></span><span>Собрано всего</span></p>
+												</div>
+												<div class="col l4">
+													<p class="value">0%</p>
+													<p class="legend"><span class="bullet _red"></span><span>Невалидный</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col m12 l4 xl4">
+									<div class="chart chart__right-info">
+										<div class="chart-row">
+											<p class="value">450 000</p>
+											<p class="legend">Целевой показатель</p>
+										</div>
+										<div class="chart-row">
+											<p class="value">327 176</p>
+											<p class="legend">Собрано всего</p>
+										</div>
+										<div class="chart-row">
+											<p class="value">73%</p>
+											<p class="legend">Выполнение целевого показателя</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col s12 m6 l8 xl8">
+					<div class="card card-white">
+						<div class="card-title has-btn">
+							<p>«Золотые» подписи</p>
+							<a class="btn-floating btn-small waves-effect waves-light btn-sync"><i class="material-icons">sync</i></a>
+						</div>
+						<div class="card-content">
+							<div class="row">
+								<div class="col m12 l8 xl10">
+									<div class="chart">
+										<div id="chart_golden_signatures"></div>
+									</div>
+								</div>
+								<div class="col m12 l4 xl2">
+									<div class="chart chart__right-info">
+										<div class="chart-row">
+											<p class="value">450 000</p>
+											<p class="legend">Целевой показатель</p>
+										</div>
+										<div class="chart-row">
+											<p class="value">327 176</p>
+											<p class="legend">Собрано всего</p>
+										</div>
+										<div class="chart-row">
+											<p class="value">73%</p>
+											<p class="legend">Выполнение целевого показателя</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="event_cells_container">
+			<div class="row">
+				<div class="col s12">
+					<h2 class="section-title">Тестовый заголовок блока</h2>
+				</div>
+			</div>
+			<div class="row flex">
+
+				<div class="col s12 m6 l8 xl8">
+					<div class="card card-white">
+						<div class="card-title has-btn">
+							<p>Какое впечатление на Вас произвел кандидат?</p>
+							<a class="btn-floating btn-small waves-effect waves-light btn-sync"><i class="material-icons">sync</i></a>
+						</div>
+						<div class="card-content">
+							<div class="row">
+								<div class="col m12">
+									<div class="chart">
+										<div id="chart_impression_candidate"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col s12 m6 l4 xl4">
+					<div class="card card-white">
+						<div class="card-title has-btn">
+							<p>Тестовая диаграмма</p>
+							<a class="btn-floating btn-small waves-effect waves-light btn-sync"><i class="material-icons">sync</i></a>
+						</div>
+						<div class="card-content">
+							<div class="row">
+								<div class="col m12">
+									<div class="chart">
+										<div id="chart_test_bars"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section id="es_datepicker_container">
+			<div class="row flex">
+				
+				<div class="col s12 m4 l3">
+					<div class="card card-white">
+						<div class="card-title has-btn">
+							<p>1 января 2020</p>
+							<a class="btn-floating btn-small waves-effect waves-light btn-sync"><i class="material-icons">sync</i></a>
+						</div>
+						<div class="card-content">
+							<div class="datepicker">
+								<input type="text" class="js-datepicker">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col s12 m4 l3">
+					<div class="datepicker-cards">
+
+						<div class="datepicker-card _blue" style="background: #DBF1FF;">
+							<div class="datepicker-card__title">2 января</div>
+							<div class="datepicker-card__time">10:05 - 11:05</div>
+							<div class="datepicker-card__value"><i class="material-icons">arrow_downward</i><span>Выставка</span></div>
+						</div>
+
+						<div class="datepicker-card _blue" style="background: #DBF1FF;">
+							<div class="datepicker-card__title">9 - 10 января</div>
+							<div class="datepicker-card__time">10:05 - 11:05</div>
+							<div class="datepicker-card__value"><i class="material-icons">arrow_downward</i><span>Пиар компания</span></div>
+						</div>
+
+						<div class="datepicker-card _red" style="background: #FFE6DB;">
+							<div class="datepicker-card__title">9 - 10 января</div>
+							<div class="datepicker-card__time">10:05 - 11:05</div>
+							<div class="datepicker-card__value"><i class="material-icons">arrow_downward</i><span>Общий сбор</span></div>
+						</div>
+
+						<div class="datepicker-card _red" style="background: #FFE6DB;">
+							<div class="datepicker-card__title">9 - 10 января</div>
+							<div class="datepicker-card__time">10:05 - 11:05</div>
+							<div class="datepicker-card__value"><i class="material-icons">arrow_upward</i><span>Выборы</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col s12 m4 l6">
+					<div class="card card-white">
+						<div class="card-title has-btn">
+							<p>Тестовая диаграмма</p>
+							<a class="btn-floating btn-small waves-effect waves-light btn-sync"><i class="material-icons">sync</i></a>
+						</div>
+						<div class="card-content">
+							<div class="row">
+								<div class="col m12">
+									<div class="chart">
+										<div id="chart_test_bars_second"></div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -141,21 +367,38 @@
 	<script>
 		$(function() {
 			var options = {
-	          series: [44, 55, 41],
-	          chart: {
-	          type: 'donut',
-	        },
-	        responsive: [{
-	          breakpoint: 480,
-	          options: {
-	            chart: {
-	              width: 200
-	            },
-	            legend: {
-	              position: 'bottom'
-	            }
-	          }
-	        }]
+	          	series: [33, 55, 11],
+	          	colors:['#0B98FA', '#F96708', '#FEC001'],
+	          	labels: ['Рисков нет', 'Репутационные риски', 'Потенциальные риски'],
+	          	chart: {
+		          	type: 'donut',
+		          	width: '100%',
+		          	height: 300,
+		        },
+		        plotOptions: {
+				    pie: {
+					    donut: {
+					    	size: '75%',
+					    }
+				    },
+				},
+		        dataLabels: {
+				    enabled: false,
+				},
+				legend: {
+              		show: false,
+            	},
+	        	responsive: [{
+		          	breakpoint: 480,
+		          	options: {
+		            	chart: {
+		              		width: 200
+		            	},
+		            	legend: {
+		              		position: 'bottom'
+		            	},
+		          	}
+		        }]
 	        };
 
 	        var chart = new ApexCharts(document.querySelector("#pie-chart"), options);
@@ -164,44 +407,253 @@
 
 		$(function() {
 			var options = {
-	         series: [
-	          	{
-		          	name: 'Рисков нет',
-		          	data: [31, 40, 28, 51, 42, 109, 100]
+	         	series: [
+	          		{
+			          	name: 'Рисков нет',
+			          	data: [31, 40, 28, 51, 42, 109, 100]
 		        	}, 
 		        	{
-		          	name: 'Репутационные риски',
-		          	data: [11, 32, 45, 32, 34, 52, 41]
+			          	name: 'Репутационные риски',
+			          	data: [11, 32, 45, 32, 34, 52, 41]
 		        	},
 		        	{
-		          	name: 'Потенциальные риски',
-		          	data: [1, 14, 9, 28, 27, 46, 87]
+			          	name: 'Потенциальные риски',
+			          	data: [46, 14, 9, 28, 27, 46, 87]
 		        	}
-		      ],
-	         chart: {
-	         height: 350,
-	         type: 'area'
-	        },
-	        dataLabels: {
-	          enabled: false
-	        },
-	        stroke: {
-	          curve: 'smooth'
-	        },
-	        xaxis: {
-	          type: 'datetime',
-	          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-	        },
-	        tooltip: {
-	          x: {
-	            format: 'dd/MM/yy HH:mm'
-	          },
-	        },
+		      	],
+		      	colors:['#0B98FA', '#F96708', '#FEC001'],
+				fill: {
+		          type: 'gradient',
+		          gradient: {
+		              shadeIntensity: 1,
+		              inverseColors: false,
+		              opacityFrom: 0.45,
+		              opacityTo: 0.05,
+		              stops: [20, 100, 100, 100]
+		            },
+		        },
+		        chart: {
+			        height: 300,
+			        type: 'area',
+		        },
+		        markers: {
+		          	size: 5,
+		          	hover: {
+		            	size: 9
+		          	}
+		        },
+		        tooltip: {
+		          	intersect: true,
+		          	shared: false
+		        },
+		        dataLabels: {
+		          	enabled: false
+		        },
+		        stroke: {
+		          	curve: 'smooth',
+		          	width: 2
+		        },
+		        xaxis: {
+		          	type: 'datetime',
+		          	categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+		        },
+		        legend: {
+		        	position: 'bottom',
+		          	horizontalAlign: 'left',
+		          	offsetX: 0,
+		        }
 	        };
 
 	        var chart = new ApexCharts(document.querySelector("#area-chart"), options);
 	        chart.render();
 		});
+
+		$(function() {
+			var options = {
+	          	series: [23, 72, 0],
+	          	// colors:['#0B98FA', '#F96708', '#FEC001'],
+	          	colors:['#FEC001', '#0B98FA', '#F96708'],
+	          	labels: ['До целевого показателя', 'Собрано всего', 'Невалидный'],
+	          	chart: {
+		          	type: 'donut',
+		          	width: '100%',
+		          	height: 300,
+		        },
+		        plotOptions: {
+				    pie: {
+					    donut: {
+					    	size: '75%',
+					    }
+				    },
+				},
+		        dataLabels: {
+				    enabled: false,
+				},
+				legend: {
+              		show: false,
+            	},
+	        	responsive: [{
+		          	breakpoint: 480,
+		          	options: {
+		            	chart: {
+		              		width: 200
+		            	},
+		            	legend: {
+		              		position: 'bottom'
+		            	},
+		          	}
+		        }]
+	        };
+
+	        var chart = new ApexCharts(document.querySelector("#chart_door_signatures"), options);
+	        chart.render();
+		});
+
+		$(function() {
+			var options = {
+	          	series: [{
+		          	data: [80142, 93828, 173970, 150000],
+		        }],
+		        colors: ['#F96708', '#0B98FA', '#F7D154', '#65CD99'],
+	          	chart: {
+		          	type: 'bar',
+		          	height: 300
+		        },
+		        plotOptions: {
+		          	bar: {
+		            	horizontal: true,
+		            	distributed: true,
+			            dataLabels: {
+			              	position: 'center'
+			            },
+		          	}
+		        },
+		        dataLabels: {
+		          	enabled: true,
+		        },
+		        xaxis: {
+		          	categories: ['Невалидный', 'Валидные', 'Собрано всего', 'Целвые показатели'],
+		        }
+	        };
+
+	        var chart = new ApexCharts(document.querySelector("#chart_golden_signatures"), options);
+	        chart.render();
+		});
+
+		$(function() {
+			var options = {
+	          	series: [
+	          		{
+	            		name: "Положительное",
+		            	data: [40, 400]
+		        	},
+		        	{
+		        		name: "Нейтральное",
+		            	data: [0, 0]
+		        	},
+		        	{
+		        		name: "Затрудняюсь ответить",
+		            	data: [170, 40]
+		        	}
+		        ],
+		        colors:['#0B98FA', '#F96708', '#FEC001'],
+		        chart: {
+		        	width: '100%',
+		          	height: 300,
+		          	type: 'line',
+		          	zoom: {
+		            	enabled: false
+		          	}
+		        },
+		        dataLabels: {
+		          	enabled: false
+		        },
+		        stroke: {
+		          	curve: 'straight',
+		          	width: 2
+		        },
+		        xaxis: {
+		          	categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+		          	labels: {
+		          		show: false
+		          	}
+		        }
+	        };
+
+	        var chart = new ApexCharts(document.querySelector("#chart_impression_candidate"), options);
+	        chart.render();
+		});
+
+		$(function() {
+			var options = {
+	          	series: [
+		          	{
+		          		data: [180, 192, 370, 310]
+		        	}
+		        ],
+		        chart: {
+		          	height: 300,
+		          	type: 'bar',
+		        },
+		        colors:['#0B98FA', '#F96708', '#FEC001', '#65CD99'],
+		        plotOptions: {
+		          bar: {
+		            columnWidth: '65%',
+		            distributed: true
+		          }
+		        },
+		        dataLabels: {
+		          enabled: false
+		        },
+		        legend: {
+		          show: false
+		        },
+		        xaxis: {
+		          categories: ['Тест 1', 'Тест 2', 'Тест 3', 'Тест 4'],
+		        }
+	        };
+	        var chart = new ApexCharts(document.querySelector("#chart_test_bars"), options);
+	        chart.render();
+		});
+
+		$(function() {
+		  $(document).ready(function(){
+		    $('.js-datepicker').datepicker();
+		  });
+		});
+
+		$(function() {
+			var options = {
+	          	series: [
+		          	{
+		          		data: [180, 192, 370, 310, 65]
+		        	}
+		        ],
+		        chart: {
+		          	height: 340,
+		          	type: 'bar',
+		        },
+		        colors:['#0B98FA', '#0B98FA', '#0B98FA', '#0B98FA', '#0B98FA'],
+		        plotOptions: {
+		          bar: {
+		            columnWidth: '65%',
+		            distributed: true
+		          }
+		        },
+		        dataLabels: {
+		          enabled: false
+		        },
+		        legend: {
+		          show: false
+		        },
+		        xaxis: {
+		          categories: ['Тест 1', 'Тест 2', 'Тест 3', 'Тест 4', 'Тест 5'],
+		        }
+	        };
+	        var chart = new ApexCharts(document.querySelector("#chart_test_bars_second"), options);
+	        chart.render();
+		});
+
 	</script>
 </body>
 </html>
