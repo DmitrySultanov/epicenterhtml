@@ -315,6 +315,202 @@ section {
 	}
 }
 
+.search-filters-panel {
+	background: #FFFFFF;
+	box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15);
+	border-radius: 3px;
+
+	.collapsible {
+		border: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+
+		.row {
+			margin-bottom: 0;
+		}
+		.row.flex {
+			align-items: center;
+		}
+
+		.collapsible-body {
+			border-bottom: none;
+			border-top: 1px solid #ddd;
+		}
+	}
+
+	.white-panel {
+		padding: 15px;
+	}
+
+	.waves-effect {
+		color: #fff;
+		padding: 10px;
+		border-radius: 3px;
+		text-align: center;
+		width: 200px;
+		height: 48px;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		font-size: 16px;
+		line-height: 24px;
+		background-color: #F75262;
+		
+		i {
+			font-size: 12px;
+			width: auto;
+		    margin: 0;
+		    margin-left: .5rem;
+		}
+	}
+}
+
+.form-element {
+	display: flex;
+	align-items: center;
+
+	input:not([type]), 
+	input[type=text]:not(.browser-default), 
+	input[type=password]:not(.browser-default), 
+	input[type=email]:not(.browser-default), 
+	input[type=url]:not(.browser-default), 
+	input[type=time]:not(.browser-default), 
+	input[type=date]:not(.browser-default), 
+	input[type=datetime]:not(.browser-default),
+	input[type=datetime-local]:not(.browser-default), 
+	input[type=tel]:not(.browser-default), 
+	input[type=number]:not(.browser-default), 
+	input[type=search]:not(.browser-default) {
+		height: 40px;
+		box-sizing: border-box;
+		border-radius: 3px;
+		border: 1px solid #F1F1F3;
+		margin-bottom: 0;
+		padding: 0 10px;
+	}
+
+	.select-wrapper {
+		position: relative;
+
+		&:before {
+			content: '\f078';
+			font-family: FontAwesome;
+			position: absolute;
+		    top: 10px;
+		    right: 15px;
+		}
+		.caret {
+			display: none;
+		}
+		
+		.dropdown-content {
+		    border-radius: 0 0 3px 3px;
+		}
+	}
+
+	label {
+		letter-spacing: -0.05px;
+		font-size: 16px;
+		line-height: 20px;
+		margin-right: 12px;
+		color: $dark;
+		white-space: nowrap;
+	}
+
+	.input-field {
+		margin-top: 0;
+		margin-bottom: 0;
+		width: 100%;
+	}
+}
+
+.colored-info-cards {
+	.card {
+		box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15);
+		display: flex;
+	    width: 100%;
+	    align-items: center;
+
+		span {
+			color: $dark;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		.value {
+			letter-spacing: 0.15px;
+			font-weight: bold;
+			font-size: 32px;
+			line-height: 24px;
+			margin-left: 10px;
+		}
+
+		.percentage {
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 24px;
+			margin-left: 5px;
+		}
+
+		&._blue {
+			background: #DBF1FF;
+
+			.percentage {
+				color: $blue;
+			}
+		}
+		&._red {
+			background: #FFE6DB;
+
+			.percentage {
+				color: $red;
+			}
+		}
+		&._gold {
+			background: #FFF6D9;
+
+			.percentage {
+				color: $gold;
+			}
+		}
+	}
+}
+
+.calendar-table {
+	width: 100%;
+
+	thead tr th {
+		text-align: center;
+		padding: 0;
+		border: 1px solid #000;
+		font-weight: normal;
+
+		.number-day-week {
+			display: block;
+			background-color: #777;
+			color: #fff;
+			padding: 2px 0;
+		}
+		.day-week {
+			text-transform: uppercase;
+		}
+
+		&.dayoff {
+			.number-day-week {
+				background-color: #ff0000;
+			}
+		}
+	}
+
+	tbody tr td {
+		padding: 10px 10px;
+		border: 1px solid #000;
+		width: 14.28%;
+		vertical-align: top;
+	}
+}
 
 @for $i from 0 through 100 {
   .progress progress[value="#{$i}"]
