@@ -549,6 +549,133 @@ section {
 	}
 }
 
+.monitiring-entries-form {
+
+	.reset-btn {
+		color: $dark;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: -0.05px;
+		display: flex;
+	    align-items: center;
+	    height: 40px;
+	    padding: 0 10px;
+	}
+}
+
+.monitoring-table {
+	thead {
+		tr th {
+			background: #F1F1F3;
+			font-weight: normal;
+			font-size: 13px;
+			line-height: 16px;
+			padding: 22px 10px;
+			position: relative;
+
+			&:first-child {
+				padding-left: 30px;
+			}
+			&:last-child {
+				padding-right: 30px;
+			}
+
+			&.sortable {
+				padding-left: 30px;
+				cursor: pointer;
+
+				&:before {
+					font-family: FontAwesome;
+					font-size: 10px;
+					position: absolute;
+					top: 50%;
+				    left: 10px;
+				    margin-top: -8px;
+				}
+
+				&.asc:before {
+					content: '\f160';
+				}
+				&.desc:before {
+					content: '\f161';
+				}
+
+				&.expand:after {
+					content: '\f107';
+					font-family: FontAwesome;
+					font-size: 13px;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	tbody tr td {
+		font-size: 13px;
+		line-height: 16px;
+		color: #4D4F5C;
+		padding: 10px 10px;
+		height: 50px;
+
+		&:first-child {
+			padding-left: 30px;
+		}
+		&:last-child {
+			padding-right: 30px;
+		}
+	}
+}
+
+
+.tb-pagination {
+	display: flex;
+	align-items: center;
+
+	button {
+		border: 1px solid #E8E9EC;
+		width: 34px;
+		height: 34px;
+		border-radius: 3px;
+		background-color: transparent;
+		color: #808495;
+		cursor: pointer;
+		margin: 0 4px;
+		padding: 0;
+	}
+
+	ul {
+		display: flex;
+
+		li {
+			margin: 0 4px;
+
+			a {
+				border: 1px solid #E8E9EC;
+				width: 34px;
+				height: 34px;
+				border-radius: 3px;
+				background-color: transparent;
+				justify-content: center;
+				align-items: center;
+				display: flex;
+				font-size: 13px;
+				line-height: 16px;
+				color: rgba(77, 79, 92, 0.5);
+				text-decoration: none;
+			}
+
+			&:hover a {
+				border-color: #F75262;
+			}
+
+			&.active a {
+				background-color: #F75262;
+				border-color: #F75262;
+				color: #fff;
+			}
+		}
+	} 
+}
 
 @for $i from 0 through 100 {
   .progress progress[value="#{$i}"]
