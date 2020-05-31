@@ -26,6 +26,20 @@ body {
 	max-width: 100%;
 }
 
+.save-report-btn {
+	height: 40px;
+	font-weight: bold;
+	font-size: 16px;
+	box-shadow: none;
+	border-radius: 3px;
+	text-transform: none;
+
+	i.left {
+		margin-right: 7px;
+    	font-size: 1rem;
+	}
+}
+
 section {
 	.section-title {
 		font-size: 32px;
@@ -151,19 +165,35 @@ section {
 		}
 
 		.card-info {
-			margin: 10px 0;
+			margin: 10px 0 0;
 			position: static;
+
+			.row {
+				margin-bottom: 0;
+			}
 
 			&__txt {
 				font-size: 24px;
 				line-height: 1;
-				margin-bottom: 15px;
+				margin-bottom: 0;
 
 				strong {
 					font-size: 32px;
 					font-weight: 700;
 					margin-right: 10px;
 				}
+
+				p {
+					font-size: 12px;
+					line-height: 1.2;
+					margin-top: 5px;
+					color: $dark
+				}
+			}
+
+			.progress {
+				margin-top: 15px;
+				margin-bottom: 10px;
 			}
 		}
 
@@ -242,6 +272,22 @@ section {
 
 				i {
 					color: #999999;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1680px) {
+		.chart {
+			.value {
+				font-size: 26px;
+			}
+		}
+
+		&.metrics {
+			.card-info {
+				&__txt strong {
+					font-size: 24px;
 				}
 			}
 		}
@@ -622,6 +668,48 @@ section {
 		}
 		&:last-child {
 			padding-right: 30px;
+		}
+	}
+}
+
+.section-signatures {
+	table {
+		thead {
+			background-color: #F1F1F3;
+
+			tr {
+				border-bottom: none;
+
+				th {
+					font-size: 13px;
+					line-height: 16px;
+					font-weight: normal;
+					color: $dark;
+					padding: 18px 5px;
+
+					&:first-child {
+						padding-left: 15px;
+					}
+					&:last-child {
+						padding-right: 15px;
+					}
+				}
+			}
+		}
+
+		tbody {
+			tr td {
+				font-size: 13px;
+				line-height: 16px;
+				color: #4D4F5C;
+
+				&:first-child {
+					padding-left: 15px;
+				}
+				&:last-child {
+					padding-right: 15px;
+				}
+			}
 		}
 	}
 }
