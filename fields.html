@@ -11,6 +11,23 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+	<header class="page-topbar trigger-menu-wrapper" id="header">
+	  	<div class="navbar">
+	    	<div class="row top-nav-container">
+		      <div class="col s12 m12 l12">
+		        	<nav class="top-nav">
+			          	<div class="switch switch-theme">
+							<label>
+							    <input type="checkbox" id="switch-theme-checkbox">
+							    <span class="lever"></span>
+							    <span class="label"></span>
+							</label>
+						</div>
+		        	</nav>
+		      </div>
+	    	</div>
+	  	</div>
+	</header>
 	<div class="container">
 		<section class="section-fields-metrics">
 			<div class="row">
@@ -890,6 +907,17 @@
 
 	        var chart = new ApexCharts(document.querySelector("#chart_signatures_golden"), options);
 	        chart.render();
+		});
+
+		$(function() {
+			$('body').addClass('theme-light');
+		  	$('#switch-theme-checkbox').on('change', function() {
+		  		if($(this).prop('checked')) {
+		  			$('body').removeClass('theme-light').addClass('theme-dark');
+		  		} else {
+		  			$('body').removeClass('theme-dark').addClass('theme-light');
+		  		}
+		  	});
 		});
 
 	</script>

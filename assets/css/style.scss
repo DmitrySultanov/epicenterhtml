@@ -694,6 +694,7 @@ table.dataTable {
 		.sorting_desc {
 		    background-image: none;
 		    padding-left: 30px;
+		    position: relative;
 
 			&:before {
 			    content: '\f161';
@@ -708,6 +709,7 @@ table.dataTable {
 		.sorting_asc {
 		    background-image: none;
 		    padding-left: 30px;
+		    position: relative;
 		    
 			&:before {
 			    content: '\f160';
@@ -762,57 +764,6 @@ table.dataTable {
 		}
 	}
 }
-
-
-// .tb-pagination {
-// 	display: flex;
-// 	align-items: center;
-
-// 	button {
-// 		border: 1px solid #E8E9EC;
-// 		width: 34px;
-// 		height: 34px;
-// 		border-radius: 3px;
-// 		background-color: transparent;
-// 		color: #808495;
-// 		cursor: pointer;
-// 		margin: 0 4px;
-// 		padding: 0;
-// 	}
-
-// 	ul {
-// 		display: flex;
-
-// 		li {
-// 			margin: 0 4px;
-
-// 			a {
-// 				border: 1px solid #E8E9EC;
-// 				width: 34px;
-// 				height: 34px;
-// 				border-radius: 3px;
-// 				background-color: transparent;
-// 				justify-content: center;
-// 				align-items: center;
-// 				display: flex;
-// 				font-size: 13px;
-// 				line-height: 16px;
-// 				color: rgba(77, 79, 92, 0.5);
-// 				text-decoration: none;
-// 			}
-
-// 			&:hover a {
-// 				border-color: #F75262;
-// 			}
-
-// 			&.active a {
-// 				background-color: #F75262;
-// 				border-color: #F75262;
-// 				color: #fff;
-// 			}
-// 		}
-// 	} 
-// }
 
 .dataTables_wrapper .dataTables_paginate {
     display: flex;
@@ -990,5 +941,205 @@ table.dataTable {
 			bottom: 0;
 			z-index: -1;
 		}
+	}
+}
+
+.pickmeup .pmu-instance .nav {
+	justify-content: space-between;
+}
+
+#ce_minicalendar .minicalendar {
+    display: flex;
+    justify-content: center;
+}
+
+.switch.switch-theme {
+	display: inline-block;
+
+	label {
+		display: inline-block;
+		position: relative;
+
+		.lever {
+			height: 36px;
+			width: 72px;
+	    	border-radius: 100px;
+	    	background-color: #fff;
+
+	    	&:before, &:after {
+	    		width: 26px;
+			    height: 26px;
+			    left: 5px;
+			    top: 5px;
+	    	}
+	    	&:after {
+	    		background-color: $gold;
+	    		box-shadow: none;
+	    		background-repeat: no-repeat;
+    			background-position: center;
+	    		background-image: url('../img/switch_day.svg');
+	    	}
+		}
+
+		.label {
+			position: absolute;
+		    left: 54px;
+		    top: 0;
+		    transition: .2s;
+		    padding-top: 1px;
+
+			&:after {
+				content: 'День';
+				color: #04183B;
+				font-size: 12px;
+				line-height: 1;
+			}
+		}
+
+		input[type=checkbox]:checked {
+			& +.lever {
+				background-color: #0F0E20;
+			}
+			& +.lever:before, 
+			& +.lever:after {
+				left: 40px;			
+			}
+			& +.lever:after {
+				background-color: #172357;
+				background-image: url('../img/switch_night.svg');
+			}
+
+			& + .lever + .label {
+				left: 24px;
+			}
+			& + .lever + .label:after {
+				content: 'Ночь';
+				color: #fff;
+			}
+		}
+	} 
+}
+
+// DARK THEME
+body.theme-dark {
+	background: #0F0E20;
+
+	.top-nav-container {
+		background-color: #172357;
+	}
+
+	.card, .datepicker-cards .datepicker-card {
+		background-color: #172357!important;
+		color: #fff;
+	}
+
+	.datepicker-cards .datepicker-card__title, 
+	.datepicker-cards .datepicker-card__time {
+		color: #fff;
+	}
+
+	.card .chart .legend {
+		color: #fff;
+	}
+
+	.progress .progress-bg {
+		background-color: #0F0E20;
+	}
+
+	section .section-title {
+		color: #fff;
+	}
+
+	.apexcharts-legend-text {
+		color: #fff!important;
+	}
+	.apexcharts-text, .apexcharts-datalabel {
+		fill: #fff!important;
+	}
+	.apexcharts-gridline {
+		stroke: #3747A0!important;
+	}
+	.apexcharts-tooltip.apexcharts-theme-light {
+		background-color: #0F0E20;
+
+		.apexcharts-tooltip-title {
+			background-color: #172357;
+		}
+	}
+
+	.colored-info-cards .card span {
+		color: #fff;
+	}
+
+	.search-filters-panel {
+		background-color: #172357;
+	}
+
+	.form-element label {
+		color: #fff;
+	}
+
+	.form-element input:not([type]), 
+	.form-element input[type=text]:not(.browser-default), 
+	.form-element input[type=password]:not(.browser-default), 
+	.form-element input[type=email]:not(.browser-default), 
+	.form-element input[type=url]:not(.browser-default), 
+	.form-element input[type=time]:not(.browser-default), 
+	.form-element input[type=date]:not(.browser-default), 
+	.form-element input[type=datetime]:not(.browser-default), 
+	.form-element input[type=datetime-local]:not(.browser-default), 
+	.form-element input[type=tel]:not(.browser-default), 
+	.form-element input[type=number]:not(.browser-default), 
+	.form-element input[type=search]:not(.browser-default) {
+		color: #fff;
+	}
+
+	.form-element .select-wrapper:before {
+		color: #fff;
+	}
+
+	.monitoring-table {
+
+		thead tr th {
+			background: #3747A0;
+		}
+		tbody tr td {
+			color: #fff;
+		}
+	} 
+
+	table.striped {
+
+		>tbody>tr {
+			&:nth-child(odd) {
+				background: rgba(15, 14, 32, 0.5);
+			}
+		}
+	}
+
+	.card.metrics .card-info__txt p {
+		color: #fff;
+	}
+
+	.section-signatures {
+
+		table {
+
+			thead {
+				background-color: #0F0E20;
+
+				tr th {
+					color: #fff;
+				}
+			}
+
+			tbody tr {
+				border-bottom-color: #0F0E20;
+				
+				td {
+					color: #fff;
+				}
+			} 
+		} 
 	}
 }
