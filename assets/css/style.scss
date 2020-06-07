@@ -310,6 +310,74 @@ section {
 	}
 }
 
+.dropdown-content, .modal {
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+
+	&::-webkit-scrollbar {
+	    width: 8px;
+	}
+	&::-webkit-scrollbar-track {
+	    background-color: $dark; 
+	    border-radius: 10px;
+	    margin: 4px 0;
+	}
+	&::-webkit-scrollbar-thumb {
+	    border-radius: 10px;
+	    background-color: $gold;  
+	}
+}
+.dropdown-content >li {
+	display: flex;
+	align-items: center;
+	padding: 10px 0;
+	min-height: 40px;
+
+	img {
+		width: 20px;
+		float: none;
+	}
+
+	span {
+		padding: 0;
+
+		&:hover {
+			background-color: initial;
+		}
+	}
+}
+
+.select-wrapper {
+
+	input.select-dropdown {
+
+	}
+} 
+
+.tabs-vertical .tabs .tab {
+	border-radius: 4px;
+}
+
+input:not([type]), 
+input[type=date]:not(.browser-default), 
+input[type=datetime-local]:not(.browser-default), 
+input[type=datetime]:not(.browser-default), 
+input[type=email]:not(.browser-default), 
+input[type=number]:not(.browser-default), 
+input[type=password]:not(.browser-default), 
+input[type=search]:not(.browser-default), 
+input[type=tel]:not(.browser-default), 
+input[type=text]:not(.browser-default), 
+input[type=time]:not(.browser-default), 
+input[type=url]:not(.browser-default), 
+textarea.materialize-textarea {
+	text-overflow: ellipsis;
+}
+
+.SizeChooser span {
+	padding: 8px 8px;
+	margin-bottom: 2px;
+}
+
 .datepicker-cards {
 	display: flex;
 	flex-direction: column;
@@ -1020,36 +1088,68 @@ table.dataTable {
 	} 
 }
 
+// таблица в конструкторе
+.event_cell-table {
+	.btn, .btn-flat, .btn-large, .btn-small {
+		padding: 0 1rem;
+	}
+
+	.input-field {
+		margin: 0;
+	}
+}
+
+#dp_fiters_container {
+	.card-panel {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+
 // DARK THEME
 body.theme-dark {
 	background: #0F0E20;
+	color: #fff;
+
+	.footer-dark {
+		background-color: #172357;
+	}
+	
+	.collapsible {
+		border-top-color: #0F0E20;
+	    border-right-color: #0F0E20;
+	    border-left-color: #0F0E20;
+	}
+	.collapsible-header {
+		background-color: #172357;
+		color: #fff;
+		border-bottom-color: #0F0E20;
+	}
+	.collapsible-body {
+		border-bottom-color: #0F0E20;
+	}
 
 	.top-nav-container {
 		background-color: #172357;
 	}
-
 	.card, .datepicker-cards .datepicker-card {
 		background-color: #172357!important;
 		color: #fff;
 	}
-
 	.datepicker-cards .datepicker-card__title, 
 	.datepicker-cards .datepicker-card__time {
 		color: #fff;
 	}
-
 	.card .chart .legend {
 		color: #fff;
 	}
-
 	.progress .progress-bg {
 		background-color: #0F0E20;
 	}
-
 	section .section-title {
 		color: #fff;
 	}
-
 	.apexcharts-legend-text {
 		color: #fff!important;
 	}
@@ -1066,17 +1166,36 @@ body.theme-dark {
 			background-color: #172357;
 		}
 	}
-
 	.colored-info-cards .card span {
 		color: #fff;
 	}
-
 	.search-filters-panel {
 		background-color: #172357;
 	}
-
 	.form-element label {
 		color: #fff;
+	}
+	.fc-icon {
+		color: #fff;
+	}
+	label {
+		color: #fff;
+	}
+	.tabs-vertical .tabs .tab a {
+		color: #fff;
+	}
+	.table-bg-head thead th {
+		color: #fff;
+		opacity: 0.75;
+	}
+
+	.apexcharts-theme-light .apexcharts-selection-icon:not(.apexcharts-selected):hover svg, 
+	.apexcharts-theme-light .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg, 
+	.apexcharts-theme-light .apexcharts-zoomin-icon:hover svg, 
+	.apexcharts-theme-light .apexcharts-zoomout-icon:hover svg, 
+	.apexcharts-theme-light .apexcharts-reset-icon:hover svg, 
+	.apexcharts-theme-light .apexcharts-menu-icon:hover svg {
+		fill: #fff;
 	}
 
 	.form-element input:not([type]), 
@@ -1094,6 +1213,35 @@ body.theme-dark {
 		color: #fff;
 	}
 
+	input:not([type]):disabled, 
+	input:not([type])[readonly=readonly], 
+	input[type=date]:not(.browser-default):disabled, 
+	input[type=date]:not(.browser-default)[readonly=readonly], 
+	input[type=datetime-local]:not(.browser-default):disabled, 
+	input[type=datetime-local]:not(.browser-default)[readonly=readonly], 
+	input[type=datetime]:not(.browser-default):disabled, 
+	input[type=datetime]:not(.browser-default)[readonly=readonly], 
+	input[type=email]:not(.browser-default):disabled, 
+	input[type=email]:not(.browser-default)[readonly=readonly], 
+	input[type=number]:not(.browser-default):disabled, 
+	input[type=number]:not(.browser-default)[readonly=readonly], 
+	input[type=password]:not(.browser-default):disabled, 
+	input[type=password]:not(.browser-default)[readonly=readonly], 
+	input[type=search]:not(.browser-default):disabled, 
+	input[type=search]:not(.browser-default)[readonly=readonly], 
+	input[type=tel]:not(.browser-default):disabled, 
+	input[type=tel]:not(.browser-default)[readonly=readonly], 
+	input[type=text]:not(.browser-default):disabled, 
+	input[type=text]:not(.browser-default)[readonly=readonly], 
+	input[type=time]:not(.browser-default):disabled, 
+	input[type=time]:not(.browser-default)[readonly=readonly], 
+	input[type=url]:not(.browser-default):disabled, 
+	input[type=url]:not(.browser-default)[readonly=readonly], 
+	textarea.materialize-textarea:disabled, 
+	textarea.materialize-textarea[readonly=readonly] {
+		border-bottom-color: rgba(255, 255, 255, .42);
+	}
+
 	.form-element .select-wrapper:before {
 		color: #fff;
 	}
@@ -1102,6 +1250,7 @@ body.theme-dark {
 
 		thead tr th {
 			background: #3747A0;
+			color: #fff;
 		}
 		tbody tr td {
 			color: #fff;
@@ -1190,6 +1339,21 @@ body.theme-dark {
 		background-color: #394ba0 !important;
 		color: #fff;
 	}
+
+	.SizeChooser span {
+		border-color: #fff;
+	}
+	.SizeChooser-selected {
+    	border: 1px #fff solid !important;
+    }
+
+    .dropdown-content li>a, .dropdown-content li>span {
+    	color: #00bcd4;
+    }
+
+    .modal {
+    	background-color: #172357;
+    }
 }
 
 // constructor
