@@ -1142,4 +1142,86 @@ body.theme-dark {
 			} 
 		} 
 	}
+
+
+	a, h1, h2, h3, h4, h5, h6, input,
+	.input-field label {
+		color: #fff;
+	}
+	.select-wrapper .caret {
+		fill: #fff;
+	}
+	input[type=text]:not(.browser-default):disabled {
+		color: #c2bcbc;
+	}
+	table.dataTable tbody tr {
+		background-color: rgb(31, 45, 99);
+	}
+	.input-field input[type=search]:focus:not(.browser-default) {
+		color: white;
+		font-weight: bold;
+		background-color: #182657;
+	}
+	.dataTables_length select,
+	.dataTables_wrapper .dataTables_paginate,
+	.dataTables_wrapper .dataTables_paginate .paginate_button,
+	.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+	.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+	.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active,
+	.dataTables_wrapper .dataTables_info {
+		color: #d2d2d2 !important;
+	}
+	.apexcharts-menu-item:hover {
+		color: #000;
+	}
+	.apexcharts-menu {
+		background: #673ab7;
+	}
+	.select2-selection--multiple,
+	.select2-container--default .select2-selection--single,
+	.select2-container--default.select2-container--focus .select2-selection--multiple {
+		background-color: #172357;
+	}
+	.card-panel {
+		background-color: #172357!important;
+		color: #fff;
+	}
+	table.event_cell-table thead {
+		background-color: #394ba0 !important;
+		color: #fff;
+	}
 }
+
+// constructor
+#bg-div-wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 300px;
+	right: 0;
+	left: 0;
+
+	.bg-div-content {
+		position: relative;
+		z-index: 100;
+	}
+
+	.bg-div-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -100;
+		height: 100%;
+
+		.bg-div-bg-item {
+			height: 100%;
+
+			span {
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				background: rgba(255, 190, 190, 0.2);
+				color: #a3a3a4;
+			}
+		}
+	}
+} 
